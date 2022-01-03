@@ -3,7 +3,8 @@ import { CreateDeliveryUseCase } from "./createDeliveryUseCase";
 
 export class CreateDeliveryController {
   async handle(request: Request, response: Response) {
-    const { idClient, itemName } = request.body
+    const { itemName } = request.body
+    const { idClient } = request
 
     const createDeliveryUseCase = new CreateDeliveryUseCase()
 

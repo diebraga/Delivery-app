@@ -30,7 +30,7 @@ model Clients {
 
 model Delivery {
   id            String       @id @default(uuid())
-  idClient      String       @unique
+  idClient      String
   client        Clients      @relation(fields: [idClient], references: [id])
   idDeliveryman String?
   deliveryman   Deliveryman? @relation(fields: [idDeliveryman], references: [id])
